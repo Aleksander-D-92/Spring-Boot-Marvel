@@ -2,6 +2,7 @@ package com.gradle.test.gradle_demo.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -9,7 +10,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "authorities")
 @Entity
 public class Authority implements GrantedAuthority {

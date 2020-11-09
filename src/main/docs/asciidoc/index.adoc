@@ -1,0 +1,12 @@
+== Get Api Example .request
+
+.request
+include::{snippets}/helloWithName/http-request.adoc[]
+.responce
+include::{snippets}/helloWithName/http-response.adoc[]
+== Post Api Example
+
+.responce
+include::{snippets}/postJson/http-response.adoc[]
+.request
+include::{snippets}/postJson/http-response.adoc[]

@@ -8,5 +8,5 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class JWT {
-    private String JWT;
+    private String value;
 }

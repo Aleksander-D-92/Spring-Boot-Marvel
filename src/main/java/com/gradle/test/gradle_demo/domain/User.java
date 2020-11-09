@@ -2,17 +2,19 @@ package com.gradle.test.gradle_demo.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "users")
 @Entity
 public class User implements UserDetails {
@@ -21,6 +23,7 @@ public class User implements UserDetails {
     private Long userId;
     private String password;
     private String username;
+    private LocalDateTime registrationDate;
     private Boolean accountNonLocked;
     @ManyToMany
     @JoinTable
@@ -28,7 +31,7 @@ public class User implements UserDetails {
 
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
+    public Set<Authority> getAuthorities() {
         return this.authorities;
     }
 
