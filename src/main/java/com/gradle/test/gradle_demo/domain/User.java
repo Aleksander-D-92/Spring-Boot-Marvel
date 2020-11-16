@@ -1,21 +1,19 @@
 package com.gradle.test.gradle_demo.domain;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.Set;
 
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "users")
+@Table(name = "users",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"username"}))
 @Entity
 public class User implements UserDetails {
     @Id
@@ -26,7 +24,9 @@ public class User implements UserDetails {
     private LocalDateTime registrationDate;
     private Boolean accountNonLocked;
     @ManyToMany
-    @JoinTable
+    @JoinTable(name = "user_authorities",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "userId"),
+            inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "authorityId"))
     private Set<Authority> authorities;
 
 

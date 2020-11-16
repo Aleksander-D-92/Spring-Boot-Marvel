@@ -1,4 +1,4 @@
-package com.gradle.test.gradle_demo.services;
+package com.gradle.test.gradle_demo.controllers.for_testing;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,10 +1,6 @@
-package com.gradle.test.gradle_demo.controllers;
+package com.gradle.test.gradle_demo.controllers.for_testing;
 
-import com.gradle.test.gradle_demo.services.HelloServiceImpl;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
