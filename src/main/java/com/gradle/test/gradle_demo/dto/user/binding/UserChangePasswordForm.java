@@ -1,4 +1,4 @@
-package com.gradle.test.gradle_demo.dto;
+package com.gradle.test.gradle_demo.dto.user.binding;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

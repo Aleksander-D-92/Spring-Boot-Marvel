@@ -2,7 +2,7 @@ package com.gradle.test.gradle_demo.services;
 
 import com.gradle.test.gradle_demo.domain.Authority;
 import com.gradle.test.gradle_demo.domain.User;
-import com.gradle.test.gradle_demo.dto.UserRegisterForm;
+import com.gradle.test.gradle_demo.dto.user.binding.UserRegisterForm;
 import com.gradle.test.gradle_demo.repositories.AuthorityRepository;
 import com.gradle.test.gradle_demo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
